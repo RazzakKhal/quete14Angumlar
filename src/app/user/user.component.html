@@ -1,0 +1,39 @@
+<div>
+
+    <label>
+      Username:
+        <input type="text" [formControl]="username">
+    </label>
+
+    <label>
+        Email:
+          <input type="email" [formControl]="email">
+      </label>
+
+      <label>
+        Password:
+          <input type="password" [formControl]="password">
+      </label>
+      <label>
+        Street:
+          <input type="text" [formControl]="street">
+      </label>
+      <label>
+        City:
+          <input type="text" [formControl]="city">
+      </label>
+      <label>
+        Post Code:
+          <input type="text" [formControl]="postCode">
+      </label>
+      <button (click)="afficheLog()">Inscription</button>
+
+
+    <div *ngIf="myUser">
+    <p>je m'appelle {{myUser.name}}</p>
+    <p>mon mail est {{myUser.mail}}</p>
+    <p>mon pass pas secret est {{myUser.password}} </p>
+    <p> j'habite {{myUser.street}} {{myUser.city}} {{myUser.postCode}} </p>
+</div>
+  </div>
+  
